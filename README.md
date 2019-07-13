@@ -1,1 +1,1 @@
-# 2018_hw_10
+# https://zefviktor.github.io/2018_hw_10

@@ -1,0 +1,25 @@
+.footer
+  background-color: rgba(255, 255, 255, 0.1)
+  &__icons
+    width: 85%
+    padding-top: 40px
+    padding-bottom: 50px
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    margin: 0 auto
+    &-icon
+      @include social-icon ($border-radius: 30px, $width: 60px, $height: 60px, $bg-color: rgba(255, 255, 255, 0.3))
+      @include text-style ($color: $color__default, $font-family: $font-family__default, $font-size: $font-size__normal, $font-weight: $font-weight__bold)
+      @media (max-width: 768px)
+        @include social-icon ($border-radius: 30px, $width: 50px, $height: 50px, $bg-color: rgba(255, 255, 255, 0.3))
+        @include text-style ($color: $color__default, $font-family: $font-family__default, $font-size: $font-size__small, $font-weight: $font-weight__bold)
+      @media (max-width: 576px)
+        @include social-icon ($border-radius: 30px, $width: 40px, $height: 40px, $bg-color: rgba(255, 255, 255, 0.3))
+        @include text-style ($color: $color__default, $font-family: $font-family__default, $font-size: $font-size__extra-small, $font-weight: $font-weight__bold)
+      @media (max-width: 320px)
+        @include social-icon ($border-radius: 30px, $width: 30px, $height: 30px, $bg-color: rgba(255, 255, 255, 0.3))
+        @include text-style ($color: $color__default, $font-family: $font-family__default, $font-size: $font-size__tiny, $font-weight: $font-weight__bold)
+
+
+

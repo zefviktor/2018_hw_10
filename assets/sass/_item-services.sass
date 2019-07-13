@@ -1,0 +1,44 @@
+.item-services
+  max-width: 275px
+  display: flex
+  margin: 0 auto
+  flex-direction: row
+  padding: 15% 0
+  @media (min-width: 320px)
+    max-width: 100%
+    padding: 5% 0 0 0
+  @media (min-width: 768px)
+    max-width: 50%
+  @media (min-width: 1200px)
+    max-width: 25%
+
+  &__item
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    width: 90%
+    padding: 45px 0
+    background-color: rgba(200, 83, 90, 0.8)
+  &__title
+    height: 130px
+    width: 130px
+    &-lightbulb
+      background: url("../img/services/lightbulb.png") center / cover no-repeat
+    &-mwand
+      background: url("../img/services/m-wand.png") center / cover no-repeat
+    &-glars
+      background: url("../img/services/glars.png") center / cover no-repeat
+    &-rocket
+      background: url("../img/services/rocket.png") center / cover no-repeat
+  &__subtitle
+    width: 100%
+    padding-top: 34px
+    @include text-style ($color: $color__default, $font-family: $font-family__default, $font-size: $font-size__medium, $font-weight: $font-weight__light)
+    text-transform: uppercase
+  &__text
+    width: 85%
+    padding-top: 50px
+    @include text-style ($color: #fefefe, $font-family: $font-family__default, $font-size: $font-size__extra-tiny, $font-weight: $font-weight__normal)
+    line-height: 20px

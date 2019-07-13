@@ -1,0 +1,32 @@
+.general-text
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  text-align: center
+  @media (max-width: 1200px)
+    margin: 0 auto
+    width: 95%
+  &__title
+    padding-top: 130px
+    @include text-style ($color: $color__default, $font-family: $font-family__default, $font-size: $font-size__extreme, $font-weight: $font-weight__light)
+    text-transform: uppercase
+    @media (max-width: 768px)
+      font-size: $font-size__mobile-large
+      padding-top: 80px
+    @media (max-width: 576px)
+      font-size: $font-size__mobile-medium
+      padding-top: 40px
+    @media (max-width: 320px)
+      font-size: $font-size__mobile-normal
+      padding-top: 20px
+  &__subtitle
+    padding-top: 45px
+    @include text-style ($color: $color__default, $font-family: $font-family__default, $font-size: $font-size__small, $font-weight: $font-weight__normal)
+    text-transform: uppercase
+    &-text
+      color: #ec9da2
+  &__text
+    padding-top: 20px
+    @include text-style ($color: #ffcccf, $font-family: $font-family__default, $font-size: $font-size__extra-tiny, $font-weight: $font-weight__light)
+    line-height: 24px

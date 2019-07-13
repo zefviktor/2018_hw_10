@@ -1,0 +1,22 @@
+
+@mixin social-icon ($border-radius, $width, $height, $bg-color)
+  border-radius: $border-radius
+  width: $width
+  height: $height
+  background-color: $bg-color
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin text-style ($color, $font-family, $font-size, $font-weight)
+  color: $color
+  font-family: $font-family
+  font-size: $font-size
+  font-weight: $font-weight
+
+@mixin bg-portfolio-item ( $width, $height, $url)
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
+  width: $width
+  height: $height
+  background: $url center / cover no-repeat

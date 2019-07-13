@@ -1,0 +1,120 @@
+.home
+  &__background
+    background: url("../img/home/home__bg.jpg") center / cover no-repeat
+  &__content
+    &-border
+      max-width: 880px
+      display: flex
+      flex-direction: row
+      align-items: center
+      margin: 0 auto
+      justify-content: center
+      background-color: rgba(212, 212, 212, 0.3)
+      @media (max-width: 768px)
+        flex-direction: column
+    &-text
+      padding: 34px 0 34px 20px
+      text-align: right
+      @include text-style ($color: $color__title, $font-family: $font-family__default, $font-size: $font-size__extreme, $font-weight: $font-weight__light)
+      @media (max-width: 768px)
+        padding: 14px 20px 14px 10px
+        text-align: center
+        font-size: $font-size__medium
+      @media (max-width: 576px)
+        font-size: $font-size__normal
+        padding: 15px 10px
+    &-subtext
+      padding: 34px 20px
+      @include text-style ($color: $color__title, $font-family: $font-family__default, $font-size: $font-size__extra-extreme, $font-weight: $font-weight__normal)
+      text-transform: uppercase
+      @media (max-width: 768px)
+        padding: 5px 10px
+        font-size: $font-size__mobile-extra-extreme
+      @media (max-width: 576px)
+        padding: 5px 10px
+        font-size: $font-size__mobile-extreme
+.carousel
+  &-wrapper
+    width: 100%
+    position: relative
+    padding-bottom: 147px
+    background-color: transparent
+    overflow: hidden
+    display: block
+
+  &-items
+    padding-top: 352px
+    padding-bottom: 413px
+    list-style: none
+    display: flex
+    flex-direction: row
+    width: 300%
+    height: 100%
+    position: relative
+    z-index: 1
+    transition: left .5s ease-out
+    -o-transition: left .5s ease-out
+    -ms-transition: left .5s ease-out
+    -moz-transition: left .5s ease-out
+    -webkit-transition: left .5s ease-out
+    @media (max-width: 1200px)
+      padding-top: 300px
+      padding-bottom: 250px
+    @media (max-width: 992px)
+      padding-top: 200px
+      padding-bottom: 180px
+    @media (max-width: 768px)
+      padding-top: 100px
+      padding-bottom: 100px
+    @media (max-width: 576px)
+      padding-top: 50px
+      padding-bottom: 50px
+  &-item
+    display: block
+    float: left
+    width: 100%
+    height: 100%
+    color: $color__default
+
+  &-labels
+    position: absolute
+    z-index: 2
+    left: 0
+    bottom: 0
+    height: 99px
+    width: 100%
+    text-align: center
+    list-style: none
+    display: block
+  &-label
+    display: inline-block
+    padding: 20px
+    &-pool
+      width: 20px
+      height: 20px
+      border-radius: 10px
+      background-color: $color__default
+      opacity: 0.5
+      display: block
+      cursor: pointer
+      border: 1px solid transparent
+  &-selector
+    display: none
+
+#slide1:checked ~ .carousel-items
+  left: 0
+
+#slide1:checked ~ .carousel-labels .carousel-label:nth-child(1) label
+  background-color: $color__title
+
+#slide2:checked ~ .carousel-items
+  left: -100%
+
+#slide2:checked ~ .carousel-labels .carousel-label:nth-child(2) label
+  background-color: $color__title
+
+#slide3:checked ~ .carousel-items
+  left: -200%
+
+#slide3:checked ~ .carousel-labels .carousel-label:nth-child(3) label
+  background-color: $color__title
